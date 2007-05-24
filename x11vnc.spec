@@ -1,14 +1,16 @@
-Summary: VNC server for the current X11 session
-Name: x11vnc
-Version: 0.8
-Release: %mkrel 1
-License: GPL
-Group: System/X11
-URL: http://www.karlrunge.com/x11vnc/
-Source:	http://dl.sf.net/libvncserver/x11vnc-%{version}.tar.gz
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
-BuildRequires: libjpeg-devel, zlib-devel
-BuildRequires: X11-devel
+Name:           x11vnc
+Version:        0.9.1
+Release:        %mkrel 1
+Summary:        VNC server for the current X11 session
+License:        GPL
+Group:          System/X11
+URL:            http://www.karlrunge.com/x11vnc/
+Source:         http://www.karlrunge.com/x11vnc/%{name}-%{version}.tar.gz
+Patch:          %{name}-0.9.1-standalone.patch
+BuildRequires:  libvncserver-devel
+BuildRequires:  autoconf2.5
+BuildRequires:  automake1.8
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 x11vnc is to X Window System what WinVNC is to Windows, i.e. a server
@@ -20,9 +22,11 @@ into a versatile and performant while still easy to use program.
 
 %prep
 %setup -q
+%patch -p 1
 
 %build
-%configure
+autoreconf
+%configure2_5x
 %make
 
 %install
@@ -33,7 +37,7 @@ into a versatile and performant while still easy to use program.
 %{__rm} -rf %{buildroot}
 
 %files
-%defattr(-, root, root, 0755)
+%defattr(-,root,root)
 %doc AUTHORS ChangeLog COPYING NEWS README TODO
 %{_mandir}/man1/x11vnc.1*
 %{_bindir}/x11vnc
