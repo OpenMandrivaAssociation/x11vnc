@@ -7,6 +7,7 @@ Group:          System/X11
 URL:            http://www.karlrunge.com/x11vnc/
 Source:         http://www.karlrunge.com/x11vnc/%{name}-%{version}.tar.gz
 Patch:          %{name}-0.9.1-standalone.patch
+BuildRequires:  libx11-devel
 BuildRequires:  libvncserver-devel
 BuildRequires:  autoconf2.5
 BuildRequires:  automake1.8
