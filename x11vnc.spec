@@ -1,11 +1,11 @@
 Name:           x11vnc
-Version:        0.9.1
+Version:        0.9.3
 Release:        %mkrel 1
 Summary:        VNC server for the current X11 session
 License:        GPL
 Group:          System/X11
 URL:            http://www.karlrunge.com/x11vnc/
-Source:         http://www.karlrunge.com/x11vnc/%{name}-%{version}.tar.gz
+Source:         http://www.karlrunge.com/x11vnc/%{name}-%{version}.tar.bz2
 Patch:          %{name}-0.9.1-standalone.patch
 BuildRequires:  libx11-devel
 BuildRequires:  libxdamage-devel
@@ -30,10 +30,8 @@ into a versatile and performant while still easy to use program.
 
 %prep
 %setup -q
-%patch -p 1
 
 %build
-autoreconf
 %configure2_5x
 %make
 
