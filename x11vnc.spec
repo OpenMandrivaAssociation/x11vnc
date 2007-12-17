@@ -18,7 +18,6 @@ BuildRequires:  openssl-devel
 BuildRequires:  libvncserver-devel
 BuildRequires:  autoconf2.5
 BuildRequires:  automake1.8
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 x11vnc is to X Window System what WinVNC is to Windows, i.e. a server
