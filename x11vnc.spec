@@ -4,6 +4,7 @@ Release:        %mkrel 1
 Summary:        VNC server for the current X11 session
 License:        GPL
 Group:          System/X11
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:            http://www.karlrunge.com/x11vnc/
 Source:         http://www.karlrunge.com/x11vnc/%{name}-%{version}.tar.bz2
 Patch:          %{name}-0.9.1-standalone.patch
