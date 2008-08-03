@@ -1,6 +1,6 @@
 Name:           x11vnc
 Version:        0.9.3
-Release:        %mkrel 3
+Release:        %mkrel 4
 Summary:        VNC server for the current X11 session
 License:        GPL
 Group:          System/X11
