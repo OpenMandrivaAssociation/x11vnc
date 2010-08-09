@@ -1,5 +1,5 @@
 Name:           x11vnc
-Version:        0.9.10
+Version:        0.9.11
 Release:        %mkrel 1
 Summary:        VNC server for the current X11 session
 License:        GPL
@@ -36,6 +36,8 @@ into a versatile and performant while still easy to use program.
 %{__rm} -rf %{buildroot}
 %makeinstall_std
 
+rm -fr %buildroot%_includedir
+
 %clean
 %{__rm} -rf %{buildroot}
 
@@ -46,4 +48,3 @@ into a versatile and performant while still easy to use program.
 %{_bindir}/x11vnc
 %{_datadir}/x11vnc/
 %{_datadir}/applications/x11vnc.desktop
-
