@@ -1,6 +1,6 @@
 Name:           x11vnc
 Version:        0.9.12
-Release:        2
+Release:        3
 Summary:        VNC server for the current X11 session
 License:        GPL
 Group:          System/X11
@@ -16,7 +16,6 @@ BuildRequires:  pkgconfig(xfixes)
 BuildRequires:  openssl-devel
 BuildRequires:  pkgconfig(libvncserver)
 BuildRequires:  pkgconfig(xi)
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 x11vnc is to X Window System what WinVNC is to Windows, i.e. a server
