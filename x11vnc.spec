@@ -6,15 +6,15 @@ License:        GPL
 Group:          System/X11
 URL:            http://www.karlrunge.com/x11vnc/
 Source:         http://downloads.sourceforge.net/sourceforge/libvncserver/%{name}-%{version}.tar.gz
-BuildRequires:  libx11-devel
-BuildRequires:  libxdamage-devel
-BuildRequires:  libxext-devel
-BuildRequires:  libxrandr-devel
-BuildRequires:  libxtst-devel
-BuildRequires:  libxinerama-devel
-BuildRequires:  libxfixes-devel
+BuildRequires:  pkgconfig(x11)
+BuildRequires:  pkgconfig(xdamage)
+BuildRequires:  pkgconfig(xext)
+BuildRequires:  pkgconfig(xrandr)
+BuildRequires:  pkgconfig(xtst)
+BuildRequires:  pkgconfig(xinerama)
+BuildRequires:  pkgconfig(xfixes)
 BuildRequires:  openssl-devel
-BuildRequires:  libvncserver-devel
+BuildRequires:  pkgconfig(libvncserver)
 BuildRequires:  pkgconfig(xi)
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
