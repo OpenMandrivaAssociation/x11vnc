@@ -1,12 +1,12 @@
 Name:           x11vnc
-Version:        0.9.16
-Release:        2
+Version:        0.9.17
+Release:        1
 Summary:        VNC server for the current X11 session
 License:        GPLv2+
 Group:          System/X11
 URL:            https://www.karlrunge.com/x11vnc/
 Source0:        https://github.com/LibVNC/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
-Patch0:         https://patch-diff.githubusercontent.com/raw/LibVNC/x11vnc/pull/121.patch
+
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xdamage)
 BuildRequires:  pkgconfig(xext)
@@ -29,8 +29,7 @@ versatile and productive while still easy to use program.
 
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 #make autoreconf more happy
 sed -i -e 's,AM_INIT_AUTOMAKE.*,AM_INIT_AUTOMAKE(\[subdir-objects\]),' configure.ac
