@@ -7,6 +7,11 @@ Group:          System/X11
 URL:            https://www.karlrunge.com/x11vnc/
 Source0:        https://github.com/LibVNC/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xdamage)
 BuildRequires:  pkgconfig(xext)
